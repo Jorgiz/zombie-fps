@@ -1,0 +1,66 @@
+{
+	"categories": [
+		{
+			"uuid": "10eda84f-de1a-401f-a57c-17370fc39ba8",
+			"title": "Task",
+			"color": "8cc674"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "5a0b32d3-c2bf-4016-8939-c0473ad8c832",
+			"title": "Todo",
+			"tasks": []
+		},
+		{
+			"uuid": "ab4f5f01-d751-4a06-a494-26bf2027258f",
+			"title": "Doing",
+			"tasks": [
+				"cb8b8fdb-6fd9-4ab8-915b-735d71472346"
+			]
+		},
+		{
+			"uuid": "162bd775-44bb-433e-9249-dfb2412e718d",
+			"title": "Done",
+			"tasks": [
+				"fa0427d2-5948-4d4b-8c49-ec9d996f55e5"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "cb8b8fdb-6fd9-4ab8-915b-735d71472346",
+			"title": "Player",
+			"description": "",
+			"category": "10eda84f-de1a-401f-a57c-17370fc39ba8",
+			"steps": []
+		},
+		{
+			"uuid": "6938d6b2-a721-4d0f-833c-217a4907a08c",
+			"title": "StateMachine",
+			"description": "",
+			"category": "10eda84f-de1a-401f-a57c-17370fc39ba8",
+			"steps": []
+		},
+		{
+			"uuid": "fa0427d2-5948-4d4b-8c49-ec9d996f55e5",
+			"title": "Prototype Level",
+			"description": "",
+			"category": "10eda84f-de1a-401f-a57c-17370fc39ba8",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"5a0b32d3-c2bf-4016-8939-c0473ad8c832"
+			],
+			[
+				"ab4f5f01-d751-4a06-a494-26bf2027258f"
+			],
+			[
+				"162bd775-44bb-433e-9249-dfb2412e718d"
+			]
+		]
+	}
+}
