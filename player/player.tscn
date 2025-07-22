@@ -7,8 +7,10 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ulp21"]
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("head")]
+collision_mask = 3
 script = ExtResource("1_rkbax")
+head = NodePath("Head/Camera3D")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -21,6 +23,9 @@ shape = SubResource("CapsuleShape3D_ulp21")
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-script = ExtResource("1_oul6g")
 
-[node name="Camera3D" type="Camera3D" parent="Head"]
+[node name="Camera3D" type="Camera3D" parent="Head" node_paths=PackedStringArray("head")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+top_level = true
+script = ExtResource("1_oul6g")
+head = NodePath("..")
