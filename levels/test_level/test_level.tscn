@@ -97,7 +97,7 @@ collision_mask = 0
 size = Vector3(3, 0.5, 3)
 
 [node name="Platform2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 2.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 3.25, 0)
 material_override = ExtResource("4_xctyr")
 use_collision = true
 collision_layer = 2
@@ -105,7 +105,7 @@ collision_mask = 0
 size = Vector3(3, 0.5, 3)
 
 [node name="Platform3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 2.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 2.75, 0)
 material_override = ExtResource("4_xctyr")
 use_collision = true
 collision_layer = 2
@@ -113,7 +113,7 @@ collision_mask = 0
 size = Vector3(3, 0.5, 3)
 
 [node name="Platform4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 1.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 2.25, 0)
 material_override = ExtResource("4_xctyr")
 use_collision = true
 collision_layer = 2
@@ -182,7 +182,7 @@ collision_mask = 0
 size = Vector3(3, 0.5, 3)
 
 [node name="Platform6" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 2.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 3.25, 0)
 material_override = ExtResource("4_xctyr")
 use_collision = true
 collision_layer = 2
@@ -190,7 +190,7 @@ collision_mask = 0
 size = Vector3(3, 0.5, 3)
 
 [node name="Platform7" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 2.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 2.75, 0)
 material_override = ExtResource("4_xctyr")
 use_collision = true
 collision_layer = 2
@@ -198,7 +198,7 @@ collision_mask = 0
 size = Vector3(3, 0.5, 3)
 
 [node name="Platform8" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 2.25, 0)
 material_override = ExtResource("4_xctyr")
 use_collision = true
 collision_layer = 2
