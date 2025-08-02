@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ttej4bmfffd0"]
+[gd_scene load_steps=10 format=3 uid="uid://ttej4bmfffd0"]
 
 [ext_resource type="Script" uid="uid://cly0td3xm6t4n" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="Script" uid="uid://dx7bbljbytb8g" path="res://player/head.gd" id="1_oul6g"]
@@ -7,6 +7,8 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ehsmr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ulp21"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g1dw6"]
 
 [sub_resource type="Animation" id="Animation_g1dw6"]
 length = 0.001
@@ -196,10 +198,11 @@ _data = {
 &"crouch placeholder": SubResource("Animation_rkbax")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("head")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("head", "uncrouch_check")]
 collision_mask = 3
 script = ExtResource("1_g1dw6")
 head = NodePath("Head/Camera3D")
+uncrouch_check = NodePath("Head/UncrouchCheck")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -218,6 +221,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 top_level = true
 script = ExtResource("1_oul6g")
 head = NodePath("..")
+
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+target_position = Vector3(0, 0, -200)
+collision_mask = 2
+
+[node name="UncrouchCheck" type="ShapeCast3D" parent="Head"]
+shape = SubResource("SphereShape3D_g1dw6")
+target_position = Vector3(0, 0.6, 0)
+collision_mask = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -4,7 +4,7 @@ extends AnimationPlayer
 
 
 func _ready() -> void:
-	get_parent().connect("is_crouching", on_is_crouching)
+	get_parent().connect("crouching", on_is_crouching)
 
 
 func on_is_crouching(state: bool) -> void:

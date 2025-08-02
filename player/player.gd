@@ -1,9 +1,11 @@
 extends CharacterBody3D
 
-signal is_crouching(state: bool)
+signal crouching(state: bool)
 
 @export var head: Camera3D
+@export var uncrouch_check: ShapeCast3D
 
+@export_category("Attributes")
 @export var walking_speed: int = 4
 @export var running_speed: int = 8
 @export var crouching_speed: int = 2
@@ -13,6 +15,9 @@ signal is_crouching(state: bool)
 
 var speed: int = 4
 var player_is_on_floor: bool
+
+var is_crouching: bool
+var waiting_to_uncrouch
 
 @onready var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -54,13 +59,7 @@ func handle_running() -> void:
 
 
 func handle_crouching() -> void:
-	if Input.is_action_pressed("crouch"):
-		speed = crouching_speed
-	
-	if Input.is_action_just_pressed("crouch"):
-		emit_signal("is_crouching", true)
-	elif Input.is_action_just_released("crouch"):
-		emit_signal("is_crouching", false)
+	pass
 
 
 func handle_jumping() -> void:
