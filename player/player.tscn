@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ttej4bmfffd0"]
+[gd_scene load_steps=13 format=3 uid="uid://ttej4bmfffd0"]
 
 [ext_resource type="Script" uid="uid://cly0td3xm6t4n" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="Script" uid="uid://dx7bbljbytb8g" path="res://player/head.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://kpncan7nxkc1" path="res://player/animation_player.gd" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://d26v8rasofeb2" path="res://state_machine/state_machine.gd" id="4_qjkh3"]
+[ext_resource type="Script" uid="uid://bhcaqcbyryhj1" path="res://player/movement_states/idle.gd" id="5_g6k8r"]
+[ext_resource type="Script" uid="uid://dvb1sb4gwa215" path="res://player/movement_states/walk.gd" id="6_g6k8r"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ehsmr"]
 
@@ -198,12 +201,10 @@ _data = {
 &"crouch placeholder": SubResource("Animation_rkbax")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("head", "uncrouch_check")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("camera")]
 collision_mask = 3
 script = ExtResource("1_g1dw6")
-head = NodePath("Head/Camera3D")
-uncrouch_check = NodePath("Head/UncrouchCheck")
-metadata/_edit_group_ = true
+camera = NodePath("Head/Camera3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -236,3 +237,15 @@ libraries = {
 &"": SubResource("AnimationLibrary_g1dw6")
 }
 script = ExtResource("3_g1dw6")
+
+[node name="MovementStateMachine" type="Node" parent="."]
+script = ExtResource("4_qjkh3")
+metadata/_custom_type_script = "uid://d26v8rasofeb2"
+
+[node name="Idle" type="Node" parent="MovementStateMachine"]
+script = ExtResource("5_g6k8r")
+metadata/_custom_type_script = "uid://c5kpej2r2e8pg"
+
+[node name="Walking" type="Node" parent="MovementStateMachine"]
+script = ExtResource("6_g6k8r")
+metadata/_custom_type_script = "uid://c5kpej2r2e8pg"

@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="cod zombie like"
+config/name="zombie fps"
 run/main_scene="uid://cj7bbhsrlv2xl"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://singletons/global.gd"
 
 [editor_plugins]
 
@@ -65,3 +69,7 @@ click={
 [layer_names]
 
 3d_physics/layer_2="world"
+
+[physics]
+
+common/physics_interpolation=true
