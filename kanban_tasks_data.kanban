@@ -11,7 +11,6 @@
 			"uuid": "5a0b32d3-c2bf-4016-8939-c0473ad8c832",
 			"title": "Todo",
 			"tasks": [
-				"5d6421d3-1b8e-4069-a5b1-698f4fa2fdda",
 				"a8d61f56-b07d-4301-92ab-dd776617d353"
 			]
 		},
@@ -19,15 +18,14 @@
 			"uuid": "ab4f5f01-d751-4a06-a494-26bf2027258f",
 			"title": "Doing",
 			"tasks": [
-				"bdd6d3bf-fbbc-4591-b032-920e66962613"
+				"bdd6d3bf-fbbc-4591-b032-920e66962613",
+				"47bbb797-6539-40c9-8c7f-7e859a455e03"
 			]
 		},
 		{
 			"uuid": "162bd775-44bb-433e-9249-dfb2412e718d",
 			"title": "Done",
-			"tasks": [
-				"47bbb797-6539-40c9-8c7f-7e859a455e03"
-			]
+			"tasks": []
 		}
 	],
 	"tasks": [
@@ -53,15 +51,8 @@
 			"steps": []
 		},
 		{
-			"uuid": "5d6421d3-1b8e-4069-a5b1-698f4fa2fdda",
-			"title": "Add Sliding",
-			"description": "",
-			"category": "10eda84f-de1a-401f-a57c-17370fc39ba8",
-			"steps": []
-		},
-		{
 			"uuid": "a8d61f56-b07d-4301-92ab-dd776617d353",
-			"title": "Add Enemy with Pathfinding",
+			"title": "Add Enemy with Pathfollowing",
 			"description": "",
 			"category": "10eda84f-de1a-401f-a57c-17370fc39ba8",
 			"steps": []

@@ -16,6 +16,7 @@ func _ready() -> void:
 	
 	current_state = states.values()[0]
 	current_state.enter()
+	print(current_state)
 
 
 func _process(delta: float) -> void:
@@ -35,3 +36,4 @@ func on_change_state(state_name: String) -> void:
 	current_state.exit()
 	current_state = states.get(state_name)
 	current_state.enter()
+	print(current_state)

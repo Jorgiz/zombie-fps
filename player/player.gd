@@ -12,6 +12,7 @@ var speed: int = 0
 
 @onready var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+
 func _enter_tree() -> void:
 	Global.player = self
 
@@ -40,3 +41,19 @@ func move() -> void:
 	var friction = Global.floor_friction if is_on_floor() else Global.air_friction
 	velocity.x = move_toward(velocity.x, target_velocity.x, friction)
 	velocity.z = move_toward(velocity.z, target_velocity.z, friction)
+
+
+func is_moving() -> bool:
+	return bool(get_inputs().length())
+
+
+func is_running() -> bool:
+	return Input.is_action_pressed("run")
+
+
+func is_crouching() -> bool:
+	return Input.is_action_pressed("crouch")
+
+
+func is_jumping() -> bool:
+	return Input.is_action_pressed("jump") and is_on_floor()
