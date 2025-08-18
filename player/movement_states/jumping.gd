@@ -2,7 +2,7 @@ extends State
 
 
 func enter() -> void:
-	Global.player.speed = Global.player.walking_speed
+	Global.player.velocity.y = Global.player.jump_velocity
 
 
 func update(delta: float) -> void:
@@ -10,16 +10,8 @@ func update(delta: float) -> void:
 
 
 func physics_update(delta: float) -> void:
-	if not Global.player.is_moving():
+	if Global.player.is_on_floor():
 		emit_signal("change_state", "idle")
-		return
-	
-	if Global.player.is_running():
-		emit_signal("change_state", "running")
-		return
-	
-	if Global.player.is_jumping():
-		emit_signal("change_state", "jumping")
 		return
 	
 	if Global.player.is_crouching():

@@ -15,11 +15,11 @@ func physics_update(delta: float) -> void:
 		return
 	
 	if Global.player.is_jumping():
-		emit_signal("change_state", "jump")
+		emit_signal("change_state", "jumping")
 		return
 	
 	if Global.player.is_crouching():
-		emit_signal("change_state", "crouch")
+		emit_signal("change_state", "crouching")
 		return
 	
 	Global.player.move() # moves with 0 speed (deaccelerate)

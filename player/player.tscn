@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ttej4bmfffd0"]
+[gd_scene load_steps=16 format=3 uid="uid://ttej4bmfffd0"]
 
 [ext_resource type="Script" uid="uid://cly0td3xm6t4n" path="res://player/player.gd" id="1_g1dw6"]
 [ext_resource type="Script" uid="uid://dx7bbljbytb8g" path="res://player/head.gd" id="1_oul6g"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://bhcaqcbyryhj1" path="res://player/movement_states/idle.gd" id="5_g6k8r"]
 [ext_resource type="Script" uid="uid://dvb1sb4gwa215" path="res://player/movement_states/walk.gd" id="6_g6k8r"]
 [ext_resource type="Script" uid="uid://2xbru4u1y86v" path="res://player/movement_states/running.gd" id="7_boad6"]
+[ext_resource type="Script" uid="uid://cpmtxpldmkg5c" path="res://player/movement_states/crouching.gd" id="8_rgyib"]
+[ext_resource type="Script" uid="uid://bequ1k01p2m6m" path="res://player/movement_states/jumping.gd" id="9_hg6s5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ehsmr"]
 
@@ -254,3 +256,13 @@ metadata/_custom_type_script = "uid://c5kpej2r2e8pg"
 [node name="Running" type="Node" parent="MovementStateMachine"]
 script = ExtResource("7_boad6")
 metadata/_custom_type_script = "uid://c5kpej2r2e8pg"
+
+[node name="Crouching" type="Node" parent="MovementStateMachine"]
+script = ExtResource("8_rgyib")
+metadata/_custom_type_script = "uid://c5kpej2r2e8pg"
+
+[node name="Jumping" type="Node" parent="MovementStateMachine"]
+script = ExtResource("9_hg6s5")
+metadata/_custom_type_script = "uid://c5kpej2r2e8pg"
+
+[connection signal="is_crouching" from="MovementStateMachine/Crouching" to="AnimationPlayer" method="_on_crouching_is_crouching"]
