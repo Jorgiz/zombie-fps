@@ -11,20 +11,21 @@
 			"uuid": "5a0b32d3-c2bf-4016-8939-c0473ad8c832",
 			"title": "Todo",
 			"tasks": [
-				"a8d61f56-b07d-4301-92ab-dd776617d353"
+				"a8d61f56-b07d-4301-92ab-dd776617d353",
+				"ac94a069-8596-4d8f-a532-dfbfde68cb89",
+				"184fea3c-dfac-4fe0-a3cb-dd4184a44c1d"
 			]
 		},
 		{
 			"uuid": "ab4f5f01-d751-4a06-a494-26bf2027258f",
 			"title": "Doing",
-			"tasks": [
-				"bdd6d3bf-fbbc-4591-b032-920e66962613"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "162bd775-44bb-433e-9249-dfb2412e718d",
 			"title": "Done",
 			"tasks": [
+				"bdd6d3bf-fbbc-4591-b032-920e66962613",
 				"47bbb797-6539-40c9-8c7f-7e859a455e03"
 			]
 		}
@@ -54,6 +55,20 @@
 		{
 			"uuid": "a8d61f56-b07d-4301-92ab-dd776617d353",
 			"title": "Add Enemy with Pathfollowing",
+			"description": "",
+			"category": "10eda84f-de1a-401f-a57c-17370fc39ba8",
+			"steps": []
+		},
+		{
+			"uuid": "ac94a069-8596-4d8f-a532-dfbfde68cb89",
+			"title": "Atirar",
+			"description": "",
+			"category": "10eda84f-de1a-401f-a57c-17370fc39ba8",
+			"steps": []
+		},
+		{
+			"uuid": "184fea3c-dfac-4fe0-a3cb-dd4184a44c1d",
+			"title": "Inimigos",
 			"description": "",
 			"category": "10eda84f-de1a-401f-a57c-17370fc39ba8",
 			"steps": []

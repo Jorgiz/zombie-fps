@@ -10,6 +10,8 @@ func update(delta: float) -> void:
 
 
 func physics_update(delta: float) -> void:
+	Global.player.move()
+	
 	if Global.player.is_on_floor():
 		emit_signal("change_state", "idle")
 		return
@@ -17,8 +19,6 @@ func physics_update(delta: float) -> void:
 	if Global.player.is_crouching():
 		emit_signal("change_state", "crouching")
 		return
-	
-	Global.player.move()
 
 
 func exit() -> void:

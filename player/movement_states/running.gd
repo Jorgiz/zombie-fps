@@ -10,6 +10,8 @@ func update(delta: float) -> void:
 
 
 func physics_update(delta: float) -> void:
+	Global.player.move()
+	
 	if not Global.player.is_running():
 		emit_signal("change_state", "walking")
 		return
@@ -21,8 +23,6 @@ func physics_update(delta: float) -> void:
 	if Global.player.is_jumping():
 		emit_signal("change_state", "jumping")
 		return
-	
-	Global.player.move()
 
 
 func exit() -> void:

@@ -14,7 +14,8 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ulp21"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_g1dw6"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hg6s5"]
+height = 1.0
 
 [sub_resource type="Animation" id="Animation_g1dw6"]
 length = 0.001
@@ -226,12 +227,12 @@ top_level = true
 script = ExtResource("1_oul6g")
 head = NodePath("..")
 
-[node name="RayCast3D" type="RayCast3D" parent="Head"]
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
 target_position = Vector3(0, 0, -200)
 collision_mask = 2
 
 [node name="UncrouchCheck" type="ShapeCast3D" parent="Head"]
-shape = SubResource("SphereShape3D_g1dw6")
+shape = SubResource("CylinderShape3D_hg6s5")
 target_position = Vector3(0, 0.6, 0)
 collision_mask = 2
 
@@ -257,8 +258,9 @@ metadata/_custom_type_script = "uid://c5kpej2r2e8pg"
 script = ExtResource("7_boad6")
 metadata/_custom_type_script = "uid://c5kpej2r2e8pg"
 
-[node name="Crouching" type="Node" parent="MovementStateMachine"]
+[node name="Crouching" type="Node" parent="MovementStateMachine" node_paths=PackedStringArray("uncrouch_check")]
 script = ExtResource("8_rgyib")
+uncrouch_check = NodePath("../../Head/UncrouchCheck")
 metadata/_custom_type_script = "uid://c5kpej2r2e8pg"
 
 [node name="Jumping" type="Node" parent="MovementStateMachine"]
